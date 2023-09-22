@@ -1,0 +1,30 @@
+# Slip protocol
+
+**0xc0** - start byte
+
+**0xce** - end byte
+
+data codes:
+
+| Encode   | Codes          |
+|----------|----------------|
+| 0xc0     | 0xdb, 0xdc     |
+| 0xdb     | 0xdb, 0xdd     |
+| 0xce     | 0xdb, 0xde     |
+
+## example
+
+| Encoded   | Coded     |
+|-----------|-----------|
+| 0xc0      | 0xc0      |
+| 0x01      | 0x01      |
+| 0x02      | 0x02      |
+| 0x03      | 0x03      |
+| 0xc0      | 0xdb      |
+| -         | 0xdc      |
+| 0xce      | 0xdb      |
+| -         | 0xde      |
+| 0xdb      | 0xdb      |
+| -         | 0xdd      |
+| 0x02      | 0x02      |
+| 0xce      | 0xce      |
